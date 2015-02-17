@@ -1,0 +1,20 @@
+{
+  "name": "couchbase-promise",
+  "version": "0.0.1",
+  "description": "A promise-based async library for Couchbase and node.js.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/balassy/couchbase-promise.git"
+  },
+  "keywords": [
+    "couchbase",
+    "promise",
+    "async"
+  ],
+  "author": "György Balássy (http://gyorgybalassy.wordpress.com/)",
+  "bugs": {
+    "url": "https://github.com/balassy/couchbase-promise/issues"
+  },
+  "homepage": "https://github.com/balassy/couchbase-promise"
+}
