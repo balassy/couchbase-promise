@@ -1,8 +1,8 @@
 {
   "name": "couchbase-promise",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A promise-based async library for Couchbase and node.js.",
-  "main": "index.js",
+  "main": "index",
   "repository": {
     "type": "git",
     "url": "https://github.com/balassy/couchbase-promise.git"
@@ -12,7 +12,6 @@
     "promise",
     "async"
   ],
-  "main": "index",
   "engines": {
     "node": ">=0.10.36"
   },
@@ -25,5 +24,10 @@
   "bugs": {
     "url": "https://github.com/balassy/couchbase-promise/issues"
   },
-  "homepage": "https://github.com/balassy/couchbase-promise"
+  "homepage": "https://github.com/balassy/couchbase-promise",
+  "dependencies": {
+    "bluebird": "^2.9.9",
+    "colors": "^1.0.3",
+    "couchbase": "^2.0.5"
+  }
 }
