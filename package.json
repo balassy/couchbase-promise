@@ -29,5 +29,13 @@
     "bluebird": "^2.9.9",
     "colors": "^1.0.3",
     "couchbase": "^2.0.5"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.9.0",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-coffee": "^2.3.1",
+    "gulp-coffeelint": "^0.4.0",
+    "run-sequence": "^1.0.2"
   }
 }
