@@ -3,6 +3,6 @@
 .idea
 .map
 node_modules
-
+lib
 **/*.log
 
