@@ -1,0 +1,9 @@
+{
+  "name": "couchbase-promise-example",
+  "version": "1.0.0",
+  "description": "A sample application that demonstrates the usage of the couchbase-promise package.",
+  "dependencies": {
+    "couchbase-promise": "*",
+    "node-uuid": "^1.4.2"
+  }
+}
