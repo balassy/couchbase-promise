@@ -27,6 +27,12 @@ Gulp.task 'lint', ->
 
 Gulp.task 'test', ->
   require 'coffee-script/register'
+  # This is required, because Gulp does not terminate after Mocha finished.
+#  Gulp.doneCallback = (err) ->
+#    if err
+#      process.exit 1
+#    else
+#      process.exit 0
   Gulp.src('test/**/*.coffee', { read: false })
     .pipe(Mocha({reporter: 'spec', ui: 'tdd'}))
 

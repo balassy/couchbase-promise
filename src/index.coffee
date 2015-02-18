@@ -28,6 +28,11 @@ class Repository
         console.log "Successfully connected to the '#{bucketName}' bucket on the Couchbase cluster #{connectionString}".green
 
 
+  @close: ->
+    console.error 'Repository error: The bucket must be opened before, please call init!' if !@bucket
+    @bucket.disconnect
+
+
   @existsAsync: (docId) =>
     new Promise (fulfill, reject) =>
       @bucket.get docId, (error, result) ->
