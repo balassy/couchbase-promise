@@ -1,6 +1,7 @@
 .idea
 npm-debug.log
 node_modules
+example
 
 /src
 /gulpfile.js

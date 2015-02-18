@@ -1,6 +1,6 @@
 {
   "name": "couchbase-promise",
-  "version": "0.0.4",
+  "version": "0.0.9",
   "description": "A promise-based async library for Couchbase and node.js.",
   "main": "index",
   "repository": {
