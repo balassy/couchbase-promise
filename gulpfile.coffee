@@ -28,7 +28,7 @@ Gulp.task 'lint', ->
 Gulp.task 'test', ->
   require 'coffee-script/register'
   Gulp.src('test/**/*.coffee', { read: false })
-    .pipe(Mocha({reporter: 'spec'}))
+    .pipe(Mocha({reporter: 'spec', ui: 'tdd'}))
 
 
 Gulp.task 'build', ->

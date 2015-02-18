@@ -1,7 +1,7 @@
 "use strict"
 assert = require 'assert'
 
-describe 'First', () ->
-  describe 'Second', () ->
-    it 'Test if runs', () ->
+suite 'First', () ->
+  suite 'Second', () ->
+    test 'Test if runs', () ->
       assert.equal 1, 1
