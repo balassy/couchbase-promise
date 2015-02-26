@@ -40,4 +40,4 @@ You can also use the `getViewAsync` method to query a document by a view.
  - As a static class, currently supports only one connection string and one bucket.
  - The views are always updated before reading data from them (`stale` not configurable yet).
 
-> **Tip**: If you find anything that limits the usage of this library for you, feel free the post a new [issue](https://github.com/balassy/couchbase-promise/issues) and describe it. Thank you!
+> **Tip**: If you find anything that limits the usage of this library for you, feel free the post a new [issue](https://github.com/balassy/couchbase-promise/issues) and describe it. 
