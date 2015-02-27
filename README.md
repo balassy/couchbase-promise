@@ -1,4 +1,4 @@
-# couchbase-promise [![Build Status](https://travis-ci.org/balassy/couchbase-promise.svg?branch=master)](https://travis-ci.org/balassy/couchbase-promise)
+# couchbase-promise [![Build Status](https://travis-ci.org/balassy/couchbase-promise.svg?branch=master)](https://travis-ci.org/balassy/couchbase-promise) [![NPM version](http://img.shields.io/npm/v/couchbase-promise.svg)](https://www.npmjs.com/package/couchbase-promise) [![Downloads](http://img.shields.io/npm/dm/couchbase-promise.svg)](https://www.npmjs.com/package/couchbase-promise)
 
 > A promise-based asynchronous library for Couchbase and node.js.
 
