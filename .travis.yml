@@ -11,3 +11,4 @@ before_install:
 
 install:
    - sudo apt-get -y install libcouchbase-dev libcouchbase2-core libcouchbase2-libevent libevent-dev
+   - npm install
