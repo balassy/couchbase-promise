@@ -6,6 +6,8 @@ The [Official Couchbase Node.js Client Library](https://www.npmjs.com/package/co
 
 [![Build Status](https://travis-ci.org/balassy/couchbase-promise.svg?branch=master)](https://travis-ci.org/balassy/couchbase-promise) [![Build status](https://ci.appveyor.com/api/projects/status/fmu0995508qv0q3b?svg=true)](https://ci.appveyor.com/project/balassy/couchbase-promise) [![NPM version](http://img.shields.io/npm/v/couchbase-promise.svg)](https://www.npmjs.com/package/couchbase-promise) [![Downloads](http://img.shields.io/npm/dm/couchbase-promise.svg)](https://www.npmjs.com/package/couchbase-promise)
 
+[![NPM](https://nodei.co/npm/couchbase-promise.png?downloads=true)](https://nodei.co/npm/couchbase-promise/)
+
 ## Usage
 
 First, install `couchbase-promise` as a dependency:
