@@ -2,6 +2,7 @@ Colors = require 'colors'
 Couchbase = require 'couchbase'
 ViewQuery = Couchbase.ViewQuery
 Promise = require 'bluebird'
+Schema = require './schema'
 
 'use strict'
 
@@ -16,8 +17,8 @@ class Repository
   @bucket
 
   @init: (connectionString, bucketName) ->
-    console.error 'Repository error: The connection string is missing!' if !connectionString
-    console.error 'Repository error: The bucket name is missing!' if !bucketName
+    Schema.validateConnectionString(connectionString)
+    Schema.validateBucketName(bucketName)
 
     @cluster = new Couchbase.Cluster connectionString
     @bucket = @cluster.openBucket bucketName, (err) ->
@@ -34,6 +35,8 @@ class Repository
 
 
   @existsAsync: (docId) =>
+    Schema.validateDocId(docId)
+
     new Promise (fulfill, reject) =>
       @bucket.get docId, (error, result) ->
         if error?
@@ -46,6 +49,8 @@ class Repository
 
 
   @getAsync: (docId) =>
+    Schema.validateDocId(docId)
+
     new Promise (fulfill, reject) =>
       @bucket.get docId, (error, result) ->
         if error?
@@ -55,6 +60,10 @@ class Repository
 
 
   @getViewAsync: (designDocumentName, viewName, key) =>
+    Schema.validateDesignDocumentName(designDocumentName)
+    Schema.validateViewName(viewName)
+    Schema.validateKey(key)
+
     new Promise (fulfill, reject) =>
       query = ViewQuery.from(designDocumentName, viewName).key(key).stale(ViewQuery.Update.BEFORE)
       @bucket.query query, (error, results) ->
@@ -65,6 +74,8 @@ class Repository
 
 
   @createAsync: (docId, docContent) =>
+    Schema.validateDocId(docId)
+
     new Promise (fulfill, reject) =>
       @bucket.insert docId, docContent, (error, result) ->
         if error?
@@ -74,6 +85,8 @@ class Repository
 
 
   @replaceAsync: (docId, docContent) =>
+    Schema.validateDocId(docId)
+
     new Promise (fulfill, reject) =>
       @bucket.replace docId, docContent, (error, result) ->
         if error?
@@ -83,6 +96,8 @@ class Repository
 
 
   @deleteAsync: (docId) =>
+    Schema.validateDocId(docId)
+
     new Promise (fulfill, reject) =>
       @bucket.remove docId, (error, result) ->
         if error?

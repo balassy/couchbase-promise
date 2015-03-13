@@ -1,6 +1,6 @@
 {
   "name": "couchbase-promise",
-  "version": "0.0.11",
+  "version": "0.1.0",
   "description": "A promise-based async library for Couchbase and node.js.",
   "main": "index",
   "repository": {
@@ -28,7 +28,8 @@
   "dependencies": {
     "bluebird": "^2.9.9",
     "colors": "^1.0.3",
-    "couchbase": "^2.0.5"
+    "couchbase": "^2.0.5",
+    "joi": "^6.0.8"
   },
   "devDependencies": {
     "chai": "^2.0.0",
