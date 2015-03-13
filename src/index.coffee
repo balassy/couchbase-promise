@@ -30,7 +30,7 @@ class Repository
 
   @close: ->
     console.error 'Repository error: The bucket must be opened before, please call init!' if !@bucket
-    @bucket.disconnect
+    @bucket.disconnect()
 
 
   @existsAsync: (docId) =>

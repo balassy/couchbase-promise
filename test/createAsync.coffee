@@ -10,8 +10,11 @@ Chai.use(ChaiAsPromised)
 
 
 suite 'createAsync', () ->
-  suiteSetup () ->
+  suiteSetup ->
     Repository.init Config.db.connectionString, Config.db.bucket
+
+  suiteTeardown ->
+    Repository.close()
 
   test 'Should return null', ->
     promise = Repository.createAsync Config.doc.id, Config.doc.content
