@@ -13,7 +13,7 @@
     "async"
   ],
   "engines": {
-    "node": ">=0.10.36"
+    "node": ">=0.12.2"
   },
   "license": "MIT",
   "author": {
@@ -26,22 +26,22 @@
   },
   "homepage": "https://github.com/balassy/couchbase-promise",
   "dependencies": {
-    "bluebird": "^2.9.9",
+    "bluebird": "^2.9.24",
     "colors": "^1.0.3",
-    "couchbase": "^2.0.5",
-    "joi": "^6.0.8"
+    "couchbase": "^2.0.7",
+    "joi": "^6.1.1"
   },
   "devDependencies": {
-    "chai": "^2.0.0",
-    "chai-as-promised": "^4.2.0",
-    "coffee-script": "^1.9.0",
+    "chai": "^2.2.0",
+    "chai-as-promised": "^4.3.0",
+    "coffee-script": "^1.9.1",
     "del": "^1.1.1",
     "gulp": "^3.8.11",
     "gulp-coffee": "^2.3.1",
     "gulp-coffeelint": "^0.4.0",
-    "gulp-mocha": "^2.0.0",
-    "mocha": "^2.1.0",
-    "node-uuid": "^1.4.2",
+    "gulp-mocha": "^2.0.1",
+    "mocha": "^2.2.4",
+    "node-uuid": "^1.4.3",
     "run-sequence": "^1.0.2"
   },
   "scripts": {
