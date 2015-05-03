@@ -1,3 +1,4 @@
+/* global process */
 var Repository = require('couchbase-promise');
 var Uuid = require('node-uuid');
 
@@ -7,7 +8,7 @@ var bucketName = 'default';
 var docId = Uuid.v4().toString();
 var docContent = { message: 'Hello World' };
 
-console.log('Application start.')
+console.log('Application start.');
 
 Repository.init(connectionString, bucketName);
 
