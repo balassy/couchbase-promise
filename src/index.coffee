@@ -59,13 +59,28 @@ class Repository
           fulfill result.value
 
 
-  @getViewAsync: (designDocumentName, viewName, key) =>
+  @getRangeViewAsync: (designDocumentName, viewName, RangeStart, RangeEnd) =>
+    Schema.validateDesignDocumentName(designDocumentName)
+    Schema.validateViewName(viewName)
+    
+    new Promise (fulfill, reject) =>
+      query = ViewQuery.from(designDocumentName, viewName).range(RangeStart, RangeEnd, true).stale(ViewQuery.Update.BEFORE)
+      @bucket.query query, (error, results) ->
+        if error?
+          reject error
+        else
+          fulfill results
+
+
+  @getViewAsync: (designDocumentName, viewName, key, options) =>
     Schema.validateDesignDocumentName(designDocumentName)
     Schema.validateViewName(viewName)
     Schema.validateKey(key)
 
     new Promise (fulfill, reject) =>
       query = ViewQuery.from(designDocumentName, viewName).key(key).stale(ViewQuery.Update.BEFORE)
+      if options?
+        query = query.options
       @bucket.query query, (error, results) ->
         if error?
           reject error
