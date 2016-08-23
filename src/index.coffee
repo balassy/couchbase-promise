@@ -80,8 +80,8 @@ class Repository
 
 
     new Promise (fulfill, reject) =>
-      if options? query = ViewQuery.from(designDocumentName, viewName).key(key).stale(ViewQuery.Update.BEFORE).options
       query = ViewQuery.from(designDocumentName, viewName).key(key).stale(ViewQuery.Update.BEFORE)
+      if options query = ViewQuery.from(designDocumentName, viewName).key(key).stale(ViewQuery.Update.BEFORE).options
       @bucket.query query, (error, results) ->
         if error?
           reject error
