@@ -81,7 +81,8 @@ class Repository
 
     new Promise (fulfill, reject) =>
       query = ViewQuery.from(designDocumentName, viewName).key(key).stale(ViewQuery.Update.BEFORE)
-      typeof options !== typeof undefined ? query = ViewQuery.from(designDocumentName, viewName).key(key).stale(ViewQuery.Update.BEFORE).options
+      if options?
+        query = ViewQuery.from(designDocumentName, viewName).key(key).stale(ViewQuery.Update.BEFORE).options
       @bucket.query query, (error, results) ->
         if error?
           reject error
