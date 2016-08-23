@@ -60,17 +60,17 @@ class Repository
 
 
 @getRangeViewAsync: (designDocumentName, viewName, RangeStart, RangeEnd) =>
-    Schema.validateDesignDocumentName(designDocumentName)
-    Schema.validateViewName(viewName)
+  Schema.validateDesignDocumentName(designDocumentName)
+  Schema.validateViewName(viewName)
   
 
-    new Promise (fulfill, reject) =>
-      query = ViewQuery.from(designDocumentName, viewName).range(RangeStart, RangeEnd, true).stale(ViewQuery.Update.BEFORE)
-      @bucket.query query, (error, results) ->
-        if error?
-          reject error
-        else
-          fulfill results
+  new Promise (fulfill, reject) =>
+    query = ViewQuery.from(designDocumentName, viewName).range(RangeStart, RangeEnd, true).stale(ViewQuery.Update.BEFORE)
+    @bucket.query query, (error, results) ->
+      if error?
+        reject error
+      else
+        fulfill results
 
 
   @getViewAsync: (designDocumentName, viewName, key, options) =>
